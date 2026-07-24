@@ -4,10 +4,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-agent = Agent(
+def build_agent():
+    agent = Agent(
     model=Groq(id="llama-3.3-70b-versatile"),
     markdown=True
 )
+    return agent
 
-# Print the response in the terminal
+agent = build_agent()
 agent.print_response("Share a 2 sentence horror story.")

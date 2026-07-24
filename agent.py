@@ -7,9 +7,11 @@ load_dotenv()
 def build_agent():
     agent = Agent(
     model=Groq(id="llama-3.3-70b-versatile"),
-    markdown=True
+    instructions = "You are a helpful and expert travel agent.",
+    markdown=True,
+    add_datetime_to_context=True,
 )
     return agent
 
 agent = build_agent()
-agent.print_response("Share a 2 sentence horror story.")
+agent.print_response("who won football world cup 2026?")

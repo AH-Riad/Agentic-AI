@@ -11,7 +11,7 @@ db = SqliteDb(db_file=db_file)
 def build_agent():
     agent = Agent(
     tools=[DuckDuckGoTools()],
-    model=Groq(id="llama-3.3-70b-versatile"),
+    model=Groq(id="openai/gpt-oss-20b"),
     instructions = "You are a helpful and expert travel agent.",
     markdown=True,
     add_datetime_to_context=True,
@@ -23,13 +23,13 @@ def build_agent():
 agent = build_agent()
 
 agent.print_response(
-    "I prefer email updates and morning meetings.",
+    "I am planing a trip to the capital of Spain?",
     user_id="sarah",
     session_id="onboarding",
 )
 
 agent.print_response(
-    "How should you schedule and send my project updates?",
+    "How can you help me with my trip to this destination?",
     user_id="sarah",
     session_id="project-planning",
 )

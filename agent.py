@@ -10,7 +10,7 @@ load_dotenv()
 def build_agent():
     agent = Agent(
     tools=[DuckDuckGoTools()],
-    model=Groq(id="llama-3.3-70b-versatile"),
+    model=Groq(id="openai/gpt-oss-20b"),
     instructions = "You are a helpful and expert football agent.",
     markdown=True,
     add_datetime_to_context=True,

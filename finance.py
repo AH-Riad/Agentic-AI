@@ -11,8 +11,8 @@ load_dotenv()
 def build_agent():
     agent = Agent(
     tools=[DuckDuckGoTools(), YFinanceTools()],
-    model=Groq(id="llama-3.3-70b-versatile"),
-    instructions = "You are a helpful and expert travel agent.",
+    model=Groq(id="openai/gpt-oss-20b"),
+    instructions = "You are a helpful and expert finance agent.",
     markdown=True,
     add_datetime_to_context=True,
 )

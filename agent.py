@@ -11,7 +11,7 @@ def build_agent():
     agent = Agent(
     tools=[DuckDuckGoTools()],
     model=Groq(id="llama-3.3-70b-versatile"),
-    instructions = "You are a helpful and expert travel agent.",
+    instructions = "You are a helpful and expert football agent.",
     markdown=True,
     add_datetime_to_context=True,
 )

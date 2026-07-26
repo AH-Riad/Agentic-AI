@@ -18,4 +18,4 @@ def build_agent():
     return agent
 
 agent = build_agent()
-agent.print_response("who won football world cup 2026?")
+agent.print_response("what is your knowledge cut off?")
